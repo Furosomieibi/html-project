@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms</title>
+</head>
+<body>
+    <div>
+        <form action="/submit_form" method="post">
+
+            <div>
+                <label>Class (readonly)</label><br>
+                <input type="text" id="fullnamereadonly" name="fullname" value="REGISTRATION" readonly> <br>
+            </div><br>
+
+            <div>
+                <label for="fullnamehidden"> Class code (hidden form field)</label><br>
+                <input type="hidden" id="fullnamehidden" name="WEB1" readonly><br>
+            </div><br>
+
+            <div>
+                <label for="fullname"> your fullname </label><br>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter name"> <br>
+            </div><br>
+
+            <div>
+                <label for="email">enter your email</label><br>
+                <input type="email" id="email" name="email"> <br>
+            </div><br>
+
+            <div>
+                <label>enter your password (required)</label><br>
+                <input type="password" id="password" name="password" required> <br>
+            </div><br>
+
+            <div>
+                <label>enter your number</label><br>
+                <input type="number" id="number" name="number"> <br>
+            </div><br>
+
+            <div>
+                <label>enter your phone/tel</label><br>
+                <input type="tel" id="tel" name="phone"> <br>
+            </div><br>
+           
+            <div>
+                <label>enter date</label><br>
+                <input type="date" id="date" name="date"> <br>
+            </div><br>
+        
+            <div>
+                <label>sex (radio type)</label><br>
+                <!-- the name attribute has to be off the same value to make them a set -->
+                <!-- note i did not add label element to the other id, feel what happens 
+                    when the radio input is not tied to the label with the for attribute  -->
+                <input type="radio" id="male" name="sex" value="male"> <label for="male">male</label> <br>
+                <input type="radio" id="female" name="sex" value="female"> <label for="female">female</label> <br>
+                <input type="radio" id="other" name="sex" value="others"> others <br>
+            </div><br>
+
+            <div>
+                <label>Marital status (check box type)
+                    this will return the last in the chexk list
+                </label><br>
+                <input type="checkbox" id="Single" name="phone" value="Single"> <label for="Single">Single</label> <br>
+                <input type="checkbox" id="Married" name="phone" value="Married"> <label for="Married">Married</label> <br>
+            </div><br>
+
+            <div>
+                <label>Education levels (check box type)
+                    this will return an <br /> array of all the checked options because of [] added to the same
+                </label><br>
+                <input type="checkbox" id="Primary" name="education[]" value="Primary"> <label for="Primary">Primary</label> <br>
+                <input type="checkbox" id="Secondary" name="education[]" value="Secondary"> <label for="Secondary">Secondary</label> <br>
+                <input type="checkbox" id="Tertiary" name="education[]" value="Tertiary"> <label for="Tertiary">Tertiary</label> <br>
+                <input type="checkbox" id="Masters" name="education[]" value="Masters"> <label for="Masters">Masters</label> <br>
+                <input type="checkbox" id="Phd" name="education[]" value="Phd"> <label for="Phd">Primary</label> <br>
+            </div><br>
+
+            <div>
+                <label for="experience">Experience:</label><br>
+                <span>(Range type) Rate your experience level (0-10)</span><br>
+                <input type="range" id="experience" name="experience" min="0" max="10" value="0" oninput="this.
+                nextElementSibling.value=this.value">
+                <output>0</output>
+                <br>
+            </div><br>
+
+            <div>
+                <label for="experience">Experience:</label>
+                <select id="experience" name="experience">
+                    <option value="0" selected >No Experience</option>
+                    <option value="1">1 year</option>
+                    <option value="2">2 year</option>
+                    <option value="3">3 year</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div><br>
+
+            <div>
+                <label>(submit) buttons</label><br>
+                <input type="submit">
+                <button type="submit">Sign up</button>
+                <button type="reset">Reset</button>
+            </div><br>
+        </form>
+    </div>
+</body>
+</html>
